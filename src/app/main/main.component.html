@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-sm">
+    <div class="list">
+      <ul class="list-group">
+        <li class="list-group-item" (click)="onSelect(value)"
+          [ngClass]="{active: objectActive?.ProductId === value.ProductId}" *ngFor="let value of data">
+          Product ID: {{value.ProductId}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="selectedData col-sm">
+    <div [hidden]="!selectedData" class="selectedObject position-fixed">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let data of selectedObjectArray">
+          <strong>{{data[0]}}:</strong> {{data[1]}}
+        </li>
+      </ul>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-outline-secondary" (click)="changeSelectData()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

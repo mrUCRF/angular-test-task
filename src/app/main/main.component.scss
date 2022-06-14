@@ -1,0 +1,53 @@
+.col-sm {
+  border: 2px solid rgb(172, 171, 171);
+}
+.list {
+  .list-group {
+    .list-group-item {
+      cursor: pointer;
+      margin: 3px 0;
+      border-radius: 7px;
+      transition: padding 0.25s;
+      background-color: rgb(222, 222, 222);
+
+      &:hover,
+      &.active {
+        background-color: rgb(148, 147, 147);
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        border-color: rgb(148, 147, 147);
+      }
+    }
+  }
+}
+.selectedData {
+  .selectedObject {
+    opacity: 0;
+    animation: ani 0.5s forwards;
+    @keyframes ani {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    max-width: none;
+    // min-width: 600px;
+    // margin: 5px 0;
+    // padding: 10px;
+    border-radius: 7px;
+    margin: 20px;
+  }
+}
+.btn {
+  margin-top: 5px;
+}
+.row {
+  margin: 10px;
+}
+.selectedObject {
+  .list-group {
+    max-width: 750px;
+  }
+}
